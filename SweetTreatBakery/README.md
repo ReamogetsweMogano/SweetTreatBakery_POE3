@@ -1,8 +1,8 @@
 # Sweet Treat Bakery Website — POE 3
 
 ## Student information
-- Student name: [Enter your full name]
-- Student number: [Enter your student number]
+- Student name: Reamogetswe Mogano
+- Student number: ST10522049
 - Module: Web Development
 - Assessment: POE 3 — JavaScript functionality and SEO
 
@@ -36,51 +36,24 @@ The JavaScript uses `addEventListener()` to respond to clicks, typing, filter ch
 The forms currently use a `mailto:` link after validating the information. This opens the visitor's email application and prepares a draft. It does **not** automatically send an email, store the form data, or use AJAX. A real online form that sends messages without relying on the visitor's email application needs a suitable form service or server-side endpoint, which must be configured and tested. Do not submit real sensitive personal information through this student demo.
 
 ## SEO improvements
-Each page has a unique title, meta description and a keyword meta tag (included because the assessment asks for it; Google says it does not use the keywords meta tag for ranking). The pages use meaningful headings, descriptive internal links, image `alt` text and a clear page structure. These are basic on-page improvements; they do not guarantee a particular search ranking. Google recommends useful content, clear titles and descriptions, descriptive links and images (Google Search Central, n.d.).
+Each page has a unique title, meta description and a keyword meta tag. The pages use meaningful headings, descriptive internal links, image `alt` text and a clear page structure. These are basic on-page improvements; they do not guarantee a particular search ranking. Google recommends useful content, clear titles and descriptions, descriptive links and images (Google Search Central, n.d.).
 
 ## Sitemap
-See `sitemap.txt` for the page structure.
+SWEET TREAT BAKERY — WEBSITE SITEMAP
 
-## Testing checklist
-1. Open `index.html` in a browser and use every navigation link.
-2. Check that the logo and product images load.
-3. On the Products page, search for `cake`, then choose a category. Confirm the results count changes.
-4. Click a product image, then close it using the close button, clicking outside the image, and the Escape key.
-5. On both forms, submit empty fields and confirm validation stops submission. Then complete the fields with test information and confirm the email draft opens. Do not send a test email unless intended.
-6. Resize the browser to desktop, tablet and mobile widths. Check navigation, text, cards, forms and map.
-7. Test keyboard navigation with Tab and Enter.
-8. Validate each HTML page at the W3C Markup Validation Service and check the CSS with the W3C CSS Validator. Fix issues reported before submission.
-9. Record actual test outcomes and take screenshots for the assignment. Do not mark a test as passed until you have run it.
+Home (index.html)
+├── About Us (about.html)
+├── Products (services.html)
+│   ├── Cakes
+│   ├── Cupcakes
+│   └── Fresh Bread
+├── Enquiry (enquiry.html)
+└── Contact (contact.html)
+    ├── Contact details and business hours
+    ├── Map
+    └── Contact form
 
-## GitHub commits
-Use several meaningful commits rather than one commit for every change at once. Example commit messages (only use these after you have made the matching changes):
-- `Fix HTML structure and improve page metadata`
-- `Add responsive layout and accessible navigation styles`
-- `Add product search filter and image lightbox`
-- `Validate enquiry and contact forms`
-- `Document POE 3 features and testing results`
-
-Useful commands from the project folder:
-```bash
-git status
-git branch --show-current
-git remote -v
-git add index.html about.html services.html enquiry.html contact.html
-git commit -m "Fix HTML structure and improve page metadata"
-git add css/style.css
-git commit -m "Add responsive layout and accessible navigation styles"
-git add js/script.js
-git commit -m "Add product search filter and image lightbox"
-git add README.md CHANGELOG.md sitemap.txt
-git commit -m "Document POE 3 features and testing results"
-git push
-```
-If the repository has not been connected to GitHub, use the repository URL supplied by your GitHub account to configure the remote. Never copy a placeholder URL.
-
-## Image credits
-The ZIP did not include source URLs for the image files. Add the original source and licence for each image here before submission, or state that an image is your own only if you created it. Do not claim that an image came from a particular website unless you can verify its source.
-
-## Harvard references
+## References
 Google Search Central (n.d.) *SEO Starter Guide: The Basics*. Available at: https://developers.google.com/search/docs/fundamentals/seo-starter-guide (Accessed: 31 October 2026).
 
 MDN Web Docs (n.d.) *EventTarget: addEventListener() method*. Available at: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener (Accessed: 31 October 2026).
