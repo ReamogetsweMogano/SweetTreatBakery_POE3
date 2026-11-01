@@ -1,0 +1,13 @@
+SWEET TREAT BAKERY — WEBSITE SITEMAP
+
+Home (index.html)
+├── About Us (about.html)
+├── Products (services.html)
+│   ├── Cakes
+│   ├── Cupcakes
+│   └── Fresh Bread
+├── Enquiry (enquiry.html)
+└── Contact (contact.html)
+    ├── Contact details and business hours
+    ├── Map
+    └── Contact form

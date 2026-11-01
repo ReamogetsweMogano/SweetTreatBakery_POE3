@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# After publishing, add your sitemap URL below using your real website address.
+# Sitemap: https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/sitemap.xml

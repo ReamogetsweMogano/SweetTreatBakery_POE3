@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Sweet Treat Bakery by telephone or email, check the location map and prepare a message.">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="Sweet Treat Bakery contact, bakery contact details, Polokwane bakery, bakery opening hours">
+  <title>Sweet Treat Bakery | Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Sweet Treat Bakery home">
+      <img src="images/logo.png" alt="Sweet Treat Bakery logo" width="120" height="120">
+      <span>Sweet Treat Bakery</span>
+    </a>
+    <p class="tagline">Freshly baked happiness every day!</p>
+  </header>
+  <nav class="site-nav" aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html" >Home</a></li>
+      <li><a href="about.html" >About</a></li>
+      <li><a href="services.html" >Products</a></li>
+      <li><a href="enquiry.html" >Enquiry</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+  <main id="main-content">
+    <section class="page-intro"><p class="eyebrow">We are here to help</p><h1>Contact Us</h1><p>Use the contact details below to ask about products, opening hours or orders.</p></section>
+    <div class="two-column">
+      <section class="content-section"><h2>Contact details</h2><p><strong>Address:</strong><br>123 Bakery Street, Polokwane</p><p><strong>Telephone:</strong><br><a href="tel:+27151234567">015 123 4567</a></p><p><strong>Email:</strong><br><a href="mailto:info@sweettreat.co.za">info@sweettreat.co.za</a></p><p class="small-note">Important: these are the contact details currently written in the project. Confirm that they are approved details for your assignment before submitting.</p></section>
+      <section class="content-section"><h2>Business hours</h2><ul><li>Monday–Friday: 08:00–17:00</li><li>Saturday: 08:00–14:00</li><li>Sunday: Closed</li></ul><p class="small-note">Confirm these hours against your proposal or replace them with the correct fictional business hours.</p></section>
+    </div>
+    <section class="content-section"><h2>Find us</h2><p>The map below points to a location in Polokwane. Check that the pin matches the address you use in your proposal.</p><div class="map-frame"><iframe title="Map showing the selected Polokwane location" src="https://www.google.com/maps?q=Polokwane%20Limpopo%20South%20Africa&output=embed" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></section>
+    <section class="content-section"><h2>Send a message</h2><p>Complete the form to validate your details and prepare an email draft.</p>
+      <form class="form-card" id="contact-form" data-mailto="info@sweettreat.co.za" novalidate>
+        <div id="contact-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+        <div class="form-field"><label for="contactname">Name *</label><input type="text" id="contactname" name="contactname" autocomplete="name" required minlength="2"></div>
+        <div class="form-field"><label for="contactemail">Email address *</label><input type="email" id="contactemail" name="contactemail" autocomplete="email" required></div>
+        <div class="form-field"><label for="contactsubject">Message topic *</label><select id="contactsubject" name="contactsubject" required><option value="">Choose a topic</option><option>Product question</option><option>Order enquiry</option><option>Opening hours</option><option>Other</option></select></div>
+        <div class="form-field"><label for="contactmessage">Message *</label><textarea id="contactmessage" name="contactmessage" rows="5" required minlength="10"></textarea></div>
+        <p class="small-note">* Required fields. The form opens your email application; it does not send a message silently.</p>
+        <button type="submit">Prepare contact email</button>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Sweet Treat Bakery</strong></p>
+    <p>&copy; 2026 Sweet Treat Bakery. All rights reserved.</p>
+    <p><a href="contact.html">Contact us</a> to ask about our products.</p>
+  </footer>
+</body>
+</html>

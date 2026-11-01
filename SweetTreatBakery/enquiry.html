@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ask Sweet Treat Bakery about cakes, cupcakes, bread, quantities, event dates and additional services.">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="Sweet Treat Bakery enquiry, cake enquiry, cupcake enquiry, bread order, bakery products">
+  <title>Sweet Treat Bakery | Enquiry</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Sweet Treat Bakery home">
+      <img src="images/logo.png" alt="Sweet Treat Bakery logo" width="120" height="120">
+      <span>Sweet Treat Bakery</span>
+    </a>
+    <p class="tagline">Freshly baked happiness every day!</p>
+  </header>
+  <nav class="site-nav" aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html" >Home</a></li>
+      <li><a href="about.html" >About</a></li>
+      <li><a href="services.html" >Products</a></li>
+      <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+      <li><a href="contact.html" >Contact</a></li>
+    </ul>
+  </nav>
+  <main id="main-content">
+    <section class="page-intro"><p class="eyebrow">Tell us what you need</p><h1>Product Enquiry</h1><p>Complete the form below. The form checks required details and prepares an email draft in your email application. Sending the email is still your choice.</p></section>
+    <form class="form-card" id="enquiry-form" data-mailto="info@sweettreat.co.za" novalidate>
+      <div id="enquiry-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+      <fieldset><legend>Personal information</legend>
+        <div class="form-field"><label for="fullname">Full name *</label><input type="text" id="fullname" name="fullname" autocomplete="name" required minlength="2"></div>
+        <div class="form-field"><label for="email">Email address *</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+        <div class="form-field"><label for="phone">Telephone number *</label><input type="tel" id="phone" name="phone" autocomplete="tel" required pattern="[0-9+() -]{7,20}" title="Enter a valid telephone number using digits, spaces, +, brackets or hyphens."></div>
+      </fieldset>
+      <fieldset><legend>Order information</legend>
+        <div class="form-field"><label for="quantity">Number of items *</label><input type="number" id="quantity" name="quantity" min="1" max="50" required></div>
+        <div class="form-field"><label for="eventdate">Event or required date</label><input type="date" id="eventdate" name="eventdate"></div>
+        <div class="form-field"><label for="product">Product *</label><select id="product" name="product" required><option value="">Choose a product</option><option value="Cake">Cake</option><option value="Cupcakes">Cupcakes</option><option value="Bread">Bread</option><option value="Cookies or pastries">Cookies or pastries</option><option value="Other">Other</option></select></div>
+      </fieldset>
+      <fieldset><legend>Contact preference and extra services</legend>
+        <div class="form-field"><span class="field-label">Preferred contact method *</span><div class="choice-row"><label><input type="radio" name="contactmethod" value="Email" required> Email</label><label><input type="radio" name="contactmethod" value="Telephone"> Telephone</label></div></div>
+        <div class="choice-row"><label><input type="checkbox" name="services" value="Delivery"> Delivery</label><label><input type="checkbox" name="services" value="Custom design"> Custom design</label></div>
+      </fieldset>
+      <div class="form-field"><label for="message">Additional details *</label><textarea id="message" name="message" rows="5" required minlength="10" placeholder="Tell us about flavours, colours or other requirements."></textarea></div>
+      <p class="small-note">* Required fields. Please do not include bank details or other sensitive information.</p>
+      <button type="submit">Prepare enquiry email</button>
+    </form>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Sweet Treat Bakery</strong></p>
+    <p>&copy; 2026 Sweet Treat Bakery. All rights reserved.</p>
+    <p><a href="contact.html">Contact us</a> to ask about our products.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse cakes, cupcakes and bread from Sweet Treat Bakery. Search and filter the product cards to find an item.">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="Sweet Treat Bakery products, cakes, cupcakes, fresh bread, bakery products, Polokwane">
+  <title>Sweet Treat Bakery | Products</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Sweet Treat Bakery home">
+      <img src="images/logo.png" alt="Sweet Treat Bakery logo" width="120" height="120">
+      <span>Sweet Treat Bakery</span>
+    </a>
+    <p class="tagline">Freshly baked happiness every day!</p>
+  </header>
+  <nav class="site-nav" aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html" >Home</a></li>
+      <li><a href="about.html" >About</a></li>
+      <li><a href="services.html" aria-current="page">Products</a></li>
+      <li><a href="enquiry.html" >Enquiry</a></li>
+      <li><a href="contact.html" >Contact</a></li>
+    </ul>
+  </nav>
+  <main id="main-content">
+    <section class="page-intro"><p class="eyebrow">Made for sharing</p><h1>Our Products</h1><p>Browse our current product examples. Please contact us to confirm flavours, prices, availability and custom-order options.</p></section>
+    <section class="product-tools" aria-label="Product search and filters">
+      <label for="product-search">Search products</label><input id="product-search" type="search" placeholder="Try cake, bread or cupcakes" autocomplete="off">
+      <label for="product-filter">Filter by category</label><select id="product-filter"><option value="all">All products</option><option value="cakes">Cakes</option><option value="cupcakes">Cupcakes</option><option value="bread">Bread</option></select>
+      <p id="product-count" class="status-message" aria-live="polite">Showing all products.</p>
+    </section>
+    <section class="product-grid" id="product-grid" aria-label="Bakery products">
+      <article class="product-card" data-name="cakes chocolate vanilla red velvet birthday celebration" data-category="cakes"><button class="image-button" type="button" aria-label="View chocolate cake image"><img src="images/cake.jpg" alt="Chocolate cake suitable for a celebration" loading="lazy" width="600" height="450"></button><div class="card-copy"><h2>Cakes</h2><p>We offer cake options for birthdays, celebrations and special occasions.</p><h3>Examples</h3><ul><li>Chocolate cake</li><li>Vanilla cake</li><li>Red velvet cake</li><li>Carrot cake</li></ul><a class="text-link" href="enquiry.html">Enquire about cakes</a></div></article>
+      <article class="product-card" data-name="cupcakes chocolate vanilla red velvet decorated small treats" data-category="cupcakes"><button class="image-button" type="button" aria-label="View decorated cupcakes image"><img src="images/cupcakes.jpg" alt="Assorted decorated cupcakes" loading="lazy" width="600" height="450"></button><div class="card-copy"><h2>Cupcakes</h2><p>Small baked treats that can be suitable for parties and sharing.</p><h3>Examples</h3><ul><li>Chocolate cupcakes</li><li>Vanilla cupcakes</li><li>Red velvet cupcakes</li></ul><a class="text-link" href="enquiry.html">Enquire about cupcakes</a></div></article>
+      <article class="product-card" data-name="bread white brown whole wheat loaf fresh everyday" data-category="bread"><button class="image-button" type="button" aria-label="View freshly baked bread image"><img src="images/bread.jpg" alt="Freshly baked bread loaves" loading="lazy" width="600" height="450"></button><div class="card-copy"><h2>Fresh Bread</h2><p>Bread options for everyday meals.</p><h3>Examples</h3><ul><li>White bread</li><li>Brown bread</li><li>Whole wheat bread</li></ul><a class="text-link" href="enquiry.html">Enquire about bread</a></div></article>
+    </section>
+    <p id="no-products" class="notice" hidden>No products match your search. Try another word or choose “All products”.</p>
+    <div id="image-lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Larger product image" hidden><button type="button" id="lightbox-close" class="lightbox-close" aria-label="Close image">&times;</button><img id="lightbox-image" src="images/cake.jpg" alt=""><p id="lightbox-caption"></p></div>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Sweet Treat Bakery</strong></p>
+    <p>&copy; 2026 Sweet Treat Bakery. All rights reserved.</p>
+    <p><a href="contact.html">Contact us</a> to ask about our products.</p>
+  </footer>
+</body>
+</html>
