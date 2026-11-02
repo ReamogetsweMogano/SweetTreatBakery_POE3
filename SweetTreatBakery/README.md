@@ -63,3 +63,4 @@ MDN Web Docs (n.d.) *Responsive web design*. Available at: https://developer.moz
 World Wide Web Consortium (W3C) (n.d.) *The W3C Markup Validation Service*. Available at: https://validator.w3.org/ (Accessed: 31 October 2026).
 
 World Wide Web Consortium (W3C) (n.d.) *CSS Validation Service*. Available at: https://jigsaw.w3.org/css-validator/ (Accessed: 31 October 2026).
+Google Search Central (n.d.) Introduction to robots.txt. Available at: Google Search Central robots.txt guide (Accessed: 1 November 2026).
