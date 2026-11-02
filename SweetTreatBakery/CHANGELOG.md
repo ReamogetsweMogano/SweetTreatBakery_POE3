@@ -15,8 +15,4 @@ All dates use YYYY-MM-DD. This file records changes made to the project.
 - Added this changelog, a human-readable sitemap, an XML sitemap template and robots.txt.
 - Added README guidance, testing steps and Harvard-style technical references.
 
-## Before submission
-- Confirm the business name, address, phone number, email address, map location and opening hours against the approved proposal.
-- Replace the example contact email if the approved project uses a different email address.
-- Test the forms on the computer used for marking and record the results.
-- Add screenshots and the actual GitHub repository URL to the submitted documentation if required by the rubric.
+
