@@ -37,14 +37,26 @@
     </div>
     <section class="content-section"><h2>Find us</h2><p>The map below points to a location in Polokwane. Check that the pin matches the address you use in your proposal.</p><div class="map-frame"><iframe title="Map showing the selected Polokwane location" src="https://www.google.com/maps?q=Polokwane%20Limpopo%20South%20Africa&output=embed" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></section>
     <section class="content-section"><h2>Send a message</h2><p>Complete the form to validate your details and prepare an email draft.</p>
-      <form class="form-card" id="contact-form" data-mailto="info@sweettreat.co.za" novalidate>
+      <form class="form-card" id="contact-form"
+      action="https://api.web3forms.com/submit"
+      method="POST" novalidate>
+        <input type="hidden" name="access_key" value="PASTE_YOUR_ACCESS_KEY_HERE">
+
+<input type="hidden" name="subject"
+       value="Sweet Treat Bakery Contact Message">
+
+<input type="hidden" name="from_name"
+       value="Sweet Treat Bakery Website">
+
+<input type="checkbox" name="botcheck"
+       style="display:none;">
         <div id="contact-feedback" class="form-feedback" role="status" aria-live="polite"></div>
         <div class="form-field"><label for="contactname">Name *</label><input type="text" id="contactname" name="contactname" autocomplete="name" required minlength="2"></div>
         <div class="form-field"><label for="contactemail">Email address *</label><input type="email" id="contactemail" name="contactemail" autocomplete="email" required></div>
         <div class="form-field"><label for="contactsubject">Message topic *</label><select id="contactsubject" name="contactsubject" required><option value="">Choose a topic</option><option>Product question</option><option>Order enquiry</option><option>Opening hours</option><option>Other</option></select></div>
         <div class="form-field"><label for="contactmessage">Message *</label><textarea id="contactmessage" name="contactmessage" rows="5" required minlength="10"></textarea></div>
         <p class="small-note">* Required fields. The form opens your email application; it does not send a message silently.</p>
-        <button type="submit">Prepare contact email</button>
+        <button type="submit">Send Message</button>
       </form>
     </section>
   </main>
