@@ -31,7 +31,19 @@
   </nav>
   <main id="main-content">
     <section class="page-intro"><p class="eyebrow">Tell us what you need</p><h1>Product Enquiry</h1><p>Complete the form below. The form checks required details and prepares an email draft in your email application. Sending the email is still your choice.</p></section>
-    <form class="form-card" id="enquiry-form" data-mailto="info@sweettreat.co.za" novalidate>
+    <form class="form-card" id="enquiry-form"
+      action="https://api.web3forms.com/submit"
+      method="POST" novalidate>
+      <input type="hidden" name="access_key" value="d91a892f-9d8c-4786-9cfd-7d3f1ea6addf">
+
+<input type="hidden" name="subject"
+       value="Sweet Treat Bakery Product Enquiry">
+
+<input type="hidden" name="from_name"
+       value="Sweet Treat Bakery Website">
+
+<input type="checkbox" name="botcheck"
+       style="display:none;">
       <div id="enquiry-feedback" class="form-feedback" role="status" aria-live="polite"></div>
       <fieldset><legend>Personal information</legend>
         <div class="form-field"><label for="fullname">Full name *</label><input type="text" id="fullname" name="fullname" autocomplete="name" required minlength="2"></div>
@@ -49,7 +61,7 @@
       </fieldset>
       <div class="form-field"><label for="message">Additional details *</label><textarea id="message" name="message" rows="5" required minlength="10" placeholder="Tell us about flavours, colours or other requirements."></textarea></div>
       <p class="small-note">* Required fields. Please do not include bank details or other sensitive information.</p>
-      <button type="submit">Prepare enquiry email</button>
+      <button type="submit">Send Enquiry</button>
     </form>
   </main>
   <footer class="site-footer">
