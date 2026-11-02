@@ -66,51 +66,95 @@ document.addEventListener('DOMContentLoaded', function () {
     if (event.key === 'Escape' && lightbox && !lightbox.hidden) closeLightbox();
   });
 
-  // Forms: validate fields and prepare a mail draft. This does not send email itself.
-  function setupEmailForm(formId, feedbackId, subjectText) {
+    // AJAX forms: validate the fields and send the data to Web3Forms.
+  async function setupAjaxForm(formId, feedbackId, subjectText) {
     const form = document.querySelector('#' + formId);
     const feedback = document.querySelector('#' + feedbackId);
+
     if (!form || !feedback) return;
-    form.addEventListener('submit', function (event) {
+
+    form.addEventListener('submit', async function (event) {
       event.preventDefault();
+
       feedback.className = 'form-feedback';
       feedback.textContent = '';
+
+      // Check that the visitor completed the form correctly.
       const invalidField = Array.from(form.elements).find(function (field) {
         return field.willValidate && !field.checkValidity();
       });
+
       if (invalidField) {
         feedback.classList.add('error');
-        feedback.textContent = 'Please check the highlighted field(s) and complete the form correctly.';
+        feedback.textContent =
+          'Please complete the required fields correctly.';
         invalidField.reportValidity();
         invalidField.focus();
         return;
       }
-      const data = new FormData(form);
-      const lines = [];
-      data.forEach(function (value, key) {
-        if (key === 'services') {
-          const previous = lines.find(function (line) { return line.startsWith('Additional services:'); });
-          if (previous) {
-            lines[lines.indexOf(previous)] = previous + ', ' + value;
-          } else {
-            lines.push('Additional services: ' + value);
+
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton.textContent;
+
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+
+      try {
+        const formData = new FormData(form);
+
+        // Add the email subject and bakery name.
+        formData.set('subject', subjectText);
+        formData.set('from_name', 'Sweet Treat Bakery Website');
+
+        // Send the form using AJAX without reloading the page.
+        const response = await fetch(
+          'https://api.web3forms.com/submit',
+          {
+            method: 'POST',
+            headers: {
+              Accept: 'application/json'
+            },
+            body: formData
           }
+        );
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          feedback.classList.add('success');
+          feedback.textContent =
+            'Thank you! Your message was sent successfully.';
+
+          form.reset();
         } else {
-          lines.push(key.replace(/([A-Z])/g, ' $1') + ': ' + value);
+          throw new Error(
+            result.message ||
+            result.body?.message ||
+            'The form could not be submitted.'
+          );
         }
-      });
-      const recipient = form.dataset.mailto;
-      if (!recipient || recipient === 'replace-with-your-real-email@example.com') {
+      } catch (error) {
         feedback.classList.add('error');
-        feedback.textContent = 'The bakery email address must be set in the form before an email can be prepared.';
-        return;
+        feedback.textContent =
+          'Sorry, your message could not be sent. Please check your connection and try again.';
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
       }
-      const mailto = 'mailto:' + encodeURIComponent(recipient) + '?subject=' + encodeURIComponent(subjectText) + '&body=' + encodeURIComponent(lines.join('\n'));
-      feedback.classList.add('success');
-      feedback.textContent = 'Your details passed the form checks. Your email application should open with a draft. Review it and press Send to deliver the message.';
-      window.location.href = mailto;
     });
   }
-  setupEmailForm('enquiry-form', 'enquiry-feedback', 'Sweet Treat Bakery product enquiry');
-  setupEmailForm('contact-form', 'contact-feedback', 'Sweet Treat Bakery contact message');
+
+  // Set up the product enquiry and contact forms.
+  setupAjaxForm(
+    'enquiry-form',
+    'enquiry-feedback',
+    'Sweet Treat Bakery Product Enquiry'
+  );
+
+  setupAjaxForm(
+    'contact-form',
+    'contact-feedback',
+    'Sweet Treat Bakery Contact Message'
+  );
+ 
 });
